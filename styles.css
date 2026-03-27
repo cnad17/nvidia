@@ -1,0 +1,408 @@
+:root {
+  --page-gray: #d7d7d9;
+  --white: #f8f8f8;
+  --ink: #0f1115;
+  --soft-ink: #22262c;
+  --neon: #7ec241;
+  --footer-green: #72b835;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.landing-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at 30% 20%, #e8f4da 0%, #f0f0f0 30%, #d4d4d6 100%);
+}
+
+.landing-card {
+  width: min(640px, 100%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ced7c4;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.landing-card h1 {
+  font-family: "Barlow", sans-serif;
+  margin: 0 0 10px;
+}
+
+.primary-btn {
+  display: inline-block;
+  margin-top: 16px;
+  background: var(--neon);
+  color: #111;
+  font-weight: 700;
+  padding: 12px 18px;
+}
+
+.certificate-page {
+  background: var(--page-gray);
+}
+
+.top-header .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 28px;
+  gap: 20px;
+}
+
+.row nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.row-light {
+  background: #f2f2f3;
+  color: #2e3036;
+}
+
+.row-dark {
+  background: #07080a;
+  color: #ececed;
+}
+
+.row-dark strong {
+  font-family: "Barlow", sans-serif;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.brand-pill {
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.certificate-shell {
+  width: min(1260px, 100% - 30px);
+  margin: 24px auto;
+  position: relative;
+}
+
+.certificate-card {
+  width: min(730px, 100%);
+  margin: 0 auto;
+  background: #ececec;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+  min-height: 640px;
+}
+
+.left-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 102px;
+  background: var(--neon);
+}
+
+.cert-inner {
+  padding: 28px 68px 38px;
+}
+
+.cert-logo {
+  font-size: 22px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+}
+
+.cert-logo span {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.cert-inner h1 {
+  font-family: "Barlow", sans-serif;
+  font-size: clamp(24px, 2.8vw, 42px);
+  margin: 24px 0 36px;
+}
+
+.line {
+  font-size: clamp(18px, 1.8vw, 40px);
+  margin: 0;
+}
+
+.completion-line {
+  font-size: clamp(14px, 1.25vw, 20px);
+  white-space: nowrap;
+}
+
+.cert-inner h2 {
+  font-family: "Barlow", sans-serif;
+  font-size: clamp(34px, 3.8vw, 62px);
+  margin: 16px 0 10px;
+}
+
+.cert-inner h3 {
+  font-family: "Barlow", sans-serif;
+  font-size: clamp(16px, 1.6vw, 26px);
+  margin: 10px 0 32px;
+  max-width: 960px;
+  white-space: nowrap;
+}
+
+.signature-block {
+  margin-top: 78px;
+}
+
+.signature-image {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin-left: -30px;
+  margin-bottom: 8px;
+  mix-blend-mode: multiply;
+}
+
+.signature-block p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.meta-block {
+  margin-top: 44px;
+  text-align: right;
+  font-size: 16px;
+}
+
+.meta-block p {
+  margin: 4px 0;
+}
+
+.floating-actions {
+  position: absolute;
+  right: 0;
+  top: 46%;
+  transform: translateY(-50%);
+  display: grid;
+  gap: 8px;
+}
+
+.floating-actions button {
+  border: 0;
+  font-weight: 700;
+  padding: 10px 14px;
+  cursor: pointer;
+  background: var(--neon);
+}
+
+.floating-actions .secondary {
+  background: #1f66a9;
+  color: #fff;
+}
+
+.identity-block {
+  width: min(1260px, 100% - 30px);
+  margin: 0 auto;
+  background: var(--page-gray);
+  padding: 18px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.identity-block p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.identity-block .identity-handle {
+  font-size: 13px;
+}
+
+.mega-footer {
+  margin-top: 0;
+  background: #050608;
+  color: #f2f2f2;
+  padding: 52px 44px 34px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 36px;
+}
+
+.footer-grid h4 {
+  margin: 0 0 18px;
+  font-family: "Barlow", sans-serif;
+  font-size: 22px;
+}
+
+.footer-grid a {
+  display: block;
+  color: var(--footer-green);
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.footer-bottom {
+  margin-top: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid #202226;
+  padding-top: 20px;
+}
+
+.subscribe-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.subscribe-row button {
+  border: 0;
+  font-size: 14px;
+  padding: 10px 18px;
+  background: var(--neon);
+  font-weight: 700;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+  .row-dark strong {
+    font-size: 30px;
+  }
+
+  .row nav {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .cert-inner {
+    padding: 28px 24px 30px;
+  }
+
+  .floating-actions {
+    position: static;
+    transform: none;
+    margin: 14px auto 0;
+    grid-template-columns: 1fr 1fr;
+    width: min(730px, 100%);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+
+  .footer-grid h4 {
+    font-size: 20px;
+  }
+
+  .footer-grid a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 720px) {
+  .top-header .row {
+    padding: 10px 12px;
+  }
+
+  .brand-pill {
+    font-size: 18px;
+  }
+
+  .row-dark strong {
+    font-size: 20px;
+  }
+
+  .line {
+    font-size: 20px;
+  }
+
+  .completion-line {
+    white-space: normal;
+  }
+
+  .cert-inner h2 {
+    font-size: 44px;
+  }
+
+  .cert-inner h3 {
+    font-size: 22px;
+    white-space: normal;
+  }
+
+  .signature-block {
+    margin-top: 48px;
+  }
+
+  .script-sign {
+    font-size: 44px;
+  }
+
+  .signature-block p {
+    font-size: 16px;
+  }
+
+  .identity-block {
+    justify-content: flex-start;
+    padding: 18px 12px 0;
+  }
+
+  .identity-block p {
+    font-size: 13px;
+  }
+
+  .mega-footer {
+    padding: 30px 14px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .footer-grid h4 {
+    font-size: 26px;
+  }
+
+  .footer-grid a {
+    font-size: 18px;
+  }
+
+  .subscribe-row {
+    font-size: 18px;
+    flex-wrap: wrap;
+  }
+
+  .subscribe-row button,
+  .footer-bottom p {
+    font-size: 18px;
+  }
+
+  .floating-actions {
+    grid-template-columns: 1fr;
+  }
+}
